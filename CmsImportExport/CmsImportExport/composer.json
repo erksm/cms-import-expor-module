@@ -1,0 +1,15 @@
+{
+    "name": "twodev/module-cms-export",
+    "description": "Export/Import CMS Blocks",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "autoload": {
+      "files": [
+        "registration.php"
+      ],
+      "psr-4": {
+        "Twodev\\CmsImportExport\\": ""
+      }
+    }
+  }
+  

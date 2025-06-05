@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="cms_export" frontName="cms_export">
+            <module name="Twodev_CmsImportExport" />
+        </route>
+        <route id="cms" frontName="cms">
+            <module name="Twodev_CmsImportExport" before="Magento_Cms"/>
+        </route>
+        <route id="cmsimportexport" frontName="cmsimportexport">
+            <module name="Twodev_CmsImportExport" before="Magento_Backend"/>
+        </route>
+    </router>
+</config>

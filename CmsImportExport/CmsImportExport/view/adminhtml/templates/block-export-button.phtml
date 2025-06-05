@@ -1,0 +1,15 @@
+<?php
+/** @var \Magento\Backend\Block\Template $block */
+$blockId = $block->getRequest()->getParam('block_id');
+if (!$blockId) return;
+
+$formKey = $block->getFormKey();
+?>
+
+<form action="<?= $block->getUrl('cms/block/export') ?>" method="post" class="export-button">
+    <input type="hidden" name="form_key" value="<?= $formKey ?>">
+    <input type="hidden" name="block_id" value="<?= $blockId ?>">
+    <button type="submit" class="action-default primary">
+        <span><?= __('Export CSV') ?></span>
+    </button>
+</form>

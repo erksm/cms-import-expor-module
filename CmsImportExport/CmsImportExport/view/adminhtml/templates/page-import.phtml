@@ -1,0 +1,16 @@
+<?php
+/** @var \Magento\Backend\Block\Template $block */
+$formKey = $block->getFormKey();
+?>
+<div class="admin__page-section">
+    <h2>Import CMS Pages</h2>
+    <div class="admin__action-buttons">
+        <form action="<?php echo $block->getUrl('cmsimportexport/page/import'); ?>" method="post" enctype="multipart/form-data">
+            <input name="form_key" type="hidden" value="<?php echo $formKey ?>" />
+            <input type="file" name="import_file" accept=".csv" required />
+            <button type="submit" class="action-default scalable save primary">
+                Import CMS Page
+            </button>
+        </form>
+    </div>
+</div>
